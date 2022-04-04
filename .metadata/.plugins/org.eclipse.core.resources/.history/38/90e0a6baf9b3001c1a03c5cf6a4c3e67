@@ -1,0 +1,34 @@
+package test;
+
+import java.util.Scanner;
+
+class  Time {
+	public static int TimeTransf = 60;
+	
+	public int TimetoSec(int time) {
+		int result = TimetoHour(time) / TimeTransf;
+	return result;
+	}
+	
+	public int TimetoHour(int time) {
+		int result = TimetoMin(time) % TimeTransf;
+	return result;
+	}
+	
+	public int TimetoMin(int time) {
+		int result = time % TimeTransf;
+		return result;
+	}
+	
+}
+public class test {
+	public static void main(String args[]) {
+		   Scanner scanner = new Scanner(System.in);
+		   Time time_sec = new Time();
+		   System.out.println("시간을 입력하시오 :");
+		   int time = scanner.nextInt();
+		   System.out.println(time + "초는 " + time_sec.TimetoHour(time) + "시간 " + time_sec.TimetoMin(time) + "분 " + time_sec.TimetoSec(time) + "초 입니다.");
+		   scanner.close();
+	}
+   
+}

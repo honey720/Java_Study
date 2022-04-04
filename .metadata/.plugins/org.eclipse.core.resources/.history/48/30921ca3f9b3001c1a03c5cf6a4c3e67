@@ -1,0 +1,28 @@
+package test;
+public class test {
+   
+   String name;
+   int price;
+   void print() { System.out.println("상품 등록) 상품명: " + name + " 가격 : " + price); }
+   
+   public test() {
+      this("",0);
+        System.out.println("오늘 입고된 포켓몬 빵 개수: \"2\"");
+   }
+   
+   public test(String name) {
+      this(name, 1000);
+   }
+   
+   public test(String name, int price) {
+      this.name = name; this.price = price;
+   }
+   
+    public static void main(String args[]) {
+       test item = new test();
+        test pokemon = new test("고오스빵",2000);
+        test pokemon2 = new test("피카츄빵");
+        pokemon.print();
+        pokemon2.print();
+    }
+}
